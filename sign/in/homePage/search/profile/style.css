@@ -1,0 +1,227 @@
+.header{
+    padding:15px 150px;
+    position:sticky;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #24292f;
+    z-index:1;
+}
+
+
+.header_left{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+.header_left > img{
+    object-fit: contain;
+    height: 30px;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+.header_left > .search_box{
+    background-color: var(--search);
+    border: 1px solid white;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
+ 
+    margin-left:10px;
+
+ 
+}
+.search_box::placeholder{
+    color:white;
+}
+
+
+.header_right_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.search_box > input[type=text]{
+    border: none;
+    outline: none;
+    background: transparent;
+    height:30px;
+    margin-left:10px;
+    width:300px;
+}
+
+.header_right{
+    display:flex;
+    flex-direction: row;
+  
+}
+
+.nav_link{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fffefd;
+    padding:0px 18px;
+}
+
+.nav_link:hover{
+
+    color:rgba(0,0,0) ;
+    cursor:pointer;
+}
+.bi{
+    font-size: var(--font_header_icon_size);
+
+}
+
+.nav_text{
+    font-size: var(--para_font_size);
+    padding: 2px 0px;
+}
+
+
+.nav_icon{
+    position:relative;
+    font-size: var(--para_font_size);
+
+}
+
+.info{
+    position:absolute;
+    top:-6;
+    right:-5;
+    background-color:brown;
+    color:white;
+    padding:1px 3px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.bi-search{
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    margin-left: 20px;
+
+}
+
+.right_nav_text{
+    width:130px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/*  body  */
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.left-sidegit{
+    
+    
+    height: 400px;
+    width:400px;
+    }
+.fix-margin{
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.profile-picture{
+    
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}    
+button{
+    padding: 3px 90px;
+    font-weight: bold;
+    background-color: #fffefd;
+    border: 1px solid black;
+}
+.right-sidegit{
+
+height: 400px;
+width:700px;
+}
+.stat{
+    
+    height: 17px;
+    width: 40px;
+    border-radius: 1px solid green;
+    color: rgb(240, 240, 240);
+    background-color: rgb(58, 58, 58);
+    padding: 5px 5px;
+    font-size: 15px;
+    border: 30%;
+    position: relative;
+    right: 30px;
+    float: right;
+}
+.post-pub{
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    font-size: 17px;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
+.post-pub:hover{
+    color:rgb(2, 18, 163);
+    text-decoration: none;
+    
+}
+/*
+          <?php
+                 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "madara1998";
+$dbname = "github";
+$user = $_SESSION["username"];
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM project where user='$user' ";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+$i=0;
+print_r($lines);
+  while($row = $result->fetch_assoc()) {
+    $filename = $row["path"];
+$fp = fopen($filename, "r");
+$user = $_SESSION["username"]; 
+$content = fread($fp, filesize($filename));
+$lines = explode("\n", $content);
+
+
+
+    echo "<a href='../php/" . $row["path"]."' class='post-pub'>".$row["nameproject"]." </a><br>";
+
+    
+
+
+  }
+  fclose($fp);
+} else {
+  echo "0 results";
+}
+$conn->close();
+?>
+
+*/

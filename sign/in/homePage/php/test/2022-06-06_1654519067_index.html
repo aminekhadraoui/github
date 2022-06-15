@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+    </style>
+</head>
+<html>
+    <body>
+        <div class="wrapper">
+            
+            <div class="title">
+                <p>Sign up to ISMAI</p>
+            </div>
+            <form method="POST" action="php/insert.php">
+            <div class="form">
+                <div class="input_field">
+                    <label>Username or email address</label>
+                    <input type="email" class="input" name="email" required>
+                </div>
+                <div class="input_field">
+                    <label>Name </label>
+                    <input type="text" class="input" name="name" required>
+                </div>
+                <div class="input_field">
+                    <label>Last name </label>
+                    <input type="text" class="input" name="lastName" required>
+                </div>
+                <div class="input_field">
+                    <label>CIN </label>
+                    <input type="text" class="input" name="cin" min="8" max="8" required>
+                </div>
+                
+                <div class="input_field">
+                    <label>Password</label>
+                    <input type="password" class="input" name="password" required>
+                    <a href="../in" class="forgot">Already have an account?</a>
+                </div>
+                <!--<div class="input_field">
+                    <label>Repeat Password</label>
+                    <input type="password" class="input">
+                </div>-->
+                <div class="input_field">
+                    <label>About you</label>
+                    <textarea placeholder="Some text..." name="textarea" required></textarea>
+                </div>
+
+                <div class="input_field">
+                <label>Type of account</label>
+                <select id="typeAccount" name="typeAccount" required>
+                    <option value="CHOSE">CHOSE....</option>
+                    <option value="Student">Student</option>
+                    <option value="teacher">teacher</option>
+                    
+                  </select>
+                </div>
+                <div class="input_field">
+                    <label>Classes</label>
+                    <select id="typeAccount" name="Classes" required>
+                        <option value="chose">CHOSE....</option>
+                        <option value="l1">L1</option>
+                        <option value="l2">L2</option>
+                        <option value="l3">L3</option>
+                      </select>
+                    </div>
+                    <div class="input_field">
+                        <label>Genre</label>
+                        <select id="typeAccount" name="Genre" required>
+                            <option value="chose">CHOSE....</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            
+                          </select>
+                        </div>
+                <div class="btn">
+                    <input type="submit" value="Sign in" class="sign_btn">
+                </div>
+            </div>
+        </form>
+            <div class="create_act">
+                <p>By creating an account, you agree to the <a href="#">Terms of Service.</a></p>
+            </div>
+            <div class="footer">
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Security</a></li>
+                  
+                </ul>
+            </div> 
+        </div>	
+    </body>
+</html>
